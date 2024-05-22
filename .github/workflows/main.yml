@@ -18,7 +18,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: kavisha/test-img:latest 
+          tags: ${{ secrets.DOCKER_USERNAME }}/test-img:latest 
           
            
 
