@@ -18,7 +18,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/test-img:latest 
+          tags: 19990712/test-img:latest 
           
            
 
