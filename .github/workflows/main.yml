@@ -16,10 +16,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Publish the image in the Dockerhub
-        run:  |
-          docker tag test-img:latest ${{ secrets.DOCKER_USERNAME }}/test-img:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/test-img:latest
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: kavisha/test-img:latest 
           
            
 
